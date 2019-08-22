@@ -10,6 +10,8 @@ function App() {
 
   let [homeScore, updateHomeScore] = useState(10);
   let [awayScore, updateAwayScore] = useState(3);
+  let [quarter, updateQuarter] = useState(1)
+  let [interval, changeInterval] = useState(100);
 
   function scoreHandler(value,score, updateFunc) {
     updateFunc(value + score);
@@ -26,13 +28,13 @@ function App() {
             <div className="home__score">{homeScore}</div>
           </div>
           {/* <div className="timer">00:03</div> */}
-          <Timer/>
+          <Timer interval={interval} changeInterval={changeInterval} quarter={quarter} updateQuarter={updateQuarter}/>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarter={quarter}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
