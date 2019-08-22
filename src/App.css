@@ -71,6 +71,15 @@
   background-color: var(--black);
   border: 2px solid white;
   border-radius: 6px;
+  width: 25rem;
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+}
+
+.numbers {
+  width: 5rem;
+  /* border: 1px solid red; */
 }
 
 .bottomRow {
